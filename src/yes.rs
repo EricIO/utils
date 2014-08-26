@@ -19,6 +19,6 @@
 
 fn main() {
     loop {
-        std::io::print("y\n");
+        println!("y");
     }
 }
