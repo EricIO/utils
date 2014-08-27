@@ -17,8 +17,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use std::os::args;
+use std::io::print;
+
 fn main() {
+    let arguments = args();
     loop {
-        println!("y");
+        if arguments.len() == 1 {
+            println!("y");
+        } else {
+            for arg in arguments.slice(1,arguments.len()).iter() {
+                print!("{} ", arg);
+            }
+            print("\n");
+        }
     }
 }
