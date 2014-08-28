@@ -1,13 +1,17 @@
 # Directory variables
-SRCDIR=src
-BINDIR=bin
+export TOPDIR=$(PWD)
+export SRCDIR=src
+export BINDIR=bin
 
 # Compiler variables
-COMPILER=rustc
+export COMPILER=rustc
+export CFLAGS=--out-dir $(TOPDIR)/bin
 
 all:
 	mkdir -p bin
-	rustc --out-dir $(BINDIR) $(SRCDIR)/yes.rs
-
+	cd $(SRCDIR)/shell && $(MAKE)
+	cd $(SRCDIR)/text  && $(MAKE)
+	cd $(SRCDIR)/file  && $(MAKE)
+	echo "Built system utils without any errors"
 clean:
 	rm -rf $(BINDIR)
