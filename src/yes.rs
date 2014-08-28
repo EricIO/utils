@@ -22,10 +22,12 @@ use std::io::print;
 
 fn main() {
     let arguments = args();
-    loop {
-        if arguments.len() == 1 {
+    if arguments.len() == 1 {
+        loop {
             println!("y");
-        } else {
+        }
+    } else {
+        loop {
             for arg in arguments.slice(1,arguments.len()).iter() {
                 print!("{} ", arg);
             }
