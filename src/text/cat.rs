@@ -17,13 +17,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+use std::io;
 use std::os;
 
 fn main() {
-    let key = "USER";
-    /* This won't work if you have switched to root with su */
-    match os::getenv(key) {
-        Some(val) => println!("{}", val),
-        None => println!("No username found!")
+    let args = os::args();
+    let paths = args.slice(1, args.len());
+    for path in paths.iter() {
+        let p = Path::new(path.as_slice());
+        let mut file = io::BufferedReader::new(io::File::open(&p));
+        for line in file.lines() {
+            print!("{}", line.unwrap());
+        }
     }
 }
+    
