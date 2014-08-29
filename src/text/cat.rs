@@ -25,8 +25,13 @@ fn main() {
     let paths = args.slice(1, args.len());
     for path in paths.iter() {
         let p = Path::new(path.as_slice());
-        let mut file = io::BufferedReader::new(io::File::open(&p));
-        for line in file.lines() {
+        let file = match io::File::open(&p) {
+            Ok(f) => f,
+            Err(e) => fail!("{}", e)
+        };
+
+        
+        for line in io::BufferedReader::new(file).lines() {
             print!("{}", line.unwrap());
         }
     }
