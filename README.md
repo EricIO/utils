@@ -45,7 +45,7 @@ Text Utils
 ----------
 
  + base64
- + cat
+ + cat      ✔
  + cksum
  + comm
  + csplit
@@ -119,5 +119,5 @@ Shell Utils
  + uptime
  + users
  + who
- + whoami
- + yes
+ + whoami    ✔
+ + yes       ✔
