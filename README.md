@@ -78,7 +78,7 @@ Text Utils
 Shell Utils
 -----------
 
- + arch
+ + arch ✔
  + basename
  + chroot
  + date
