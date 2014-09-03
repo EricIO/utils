@@ -45,7 +45,7 @@ Text Utils
 ----------
 
  + base64
- + cat
+ + cat		&#10004
  + cksum
  + comm
  + csplit
