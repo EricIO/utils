@@ -1,5 +1,5 @@
 /* 
- * This program prints 'y\n' until the computer gives up
+ * This program prints the current user
  *  
  * Copyright (C) 2014  Eric Skoglund
  *

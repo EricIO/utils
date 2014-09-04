@@ -1,5 +1,5 @@
 /* 
- * This program prints 'y\n' until the computer gives up
+ * This program prints the contents of the input file to stdout
  *  
  * Copyright (C) 2014  Eric Skoglund
  *
