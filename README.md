@@ -6,9 +6,6 @@ fun to actually replace some of my utils with rust
 programs. So that's what I'm doing. Nothing serious
 just plain old fun.
 
-I want to have all programs be pure rust and no calls
-to c code.
-
 Program List
 ============
 
